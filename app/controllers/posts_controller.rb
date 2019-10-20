@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def new
     if params[:author_id] && !Author.exists?(params[:author_id])
+      redirect_to authors_path, alert: "Author not found."
   end
 
   def create
