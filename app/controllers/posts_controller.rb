@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    
+    if params[:author_id] && !Author.exists?(params[:author_id])
   end
 
   def create
